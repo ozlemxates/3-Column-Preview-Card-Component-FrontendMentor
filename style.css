@@ -1,0 +1,137 @@
+*{}
+
+:root {
+    --bg-1: hsl(31, 77%, 52%);
+    --bg-2: hsl(184, 100%, 22%);
+    --bg-3: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --bg-headings-buttons: hsl(0, 0%, 95%);
+    --fl:'Big Shoulders Display', cursive;
+    --fbs:'Lexend Deca', sans-serif;
+}
+
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+ 
+body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    max-width: 1200px;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-1);
+    padding: 50px;
+    gap: 20px;
+    color: var(--paragraphs);
+}
+
+h1 {
+    font-family: var(--fl);
+    font-weight: 700;
+    font-size: 50px;
+}
+
+p {
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+
+p, button {
+    font-family: var(--fbs);
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-2);
+    padding: 50px;
+    gap: 20px;
+    color: var(--paragraphs);
+}
+
+.third {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-3);
+    padding: 50px;
+    gap: 20px;
+    color: var(--paragraphs);
+}
+
+img {
+    width: 40%;
+}
+
+button {
+    width: 230px;
+    height: 43px;
+    background-color: var(--bg-headings-buttons);
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.2) perspective(1px)
+}
+
+.first button {
+    color: var(--bg-1);
+}
+
+.second button {
+    color: var(--bg-2);
+}
+
+.third button {
+    color: var(--bg-3);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    color: black; 
+}
+
+.attribution a {
+     color: hsl(0, 0%, 0%); 
+}
+
+@media screen and (max-width:768px) {
+    main {
+        width: 650px;
+        margin-top: 50px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:468px) {
+    main {
+        width: 350px;
+        margin-top: 50px;
+        grid-template-columns: 1fr;
+        
+    }
+
+    .first, .second, .third {
+        gap:20px
+    }
+}
