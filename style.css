@@ -124,22 +124,18 @@ button:hover {
      
 }
 
-@media screen and (max-width:768px) {
-    main {
-        width: 650px;
-        margin-top: 50px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 20px;
-        grid-template-areas:
-        "first"
-        "second"
-        "third";
-    }
-}
-
 @media screen and (max-width:468px) {
+
+    body {
+        height: 2000px;
+        align-items: center;
+        justify-content: center;
+    }
+
     main {
+        display: grid;
         width: 350px;
+        height: 3fr;
         margin-top: 50px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
