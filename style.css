@@ -26,8 +26,12 @@ main {
     height: max-content;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "first second third";
     border-radius: 10px;
     overflow: hidden;
+   
 }
 
 .first {
@@ -37,6 +41,9 @@ main {
     padding: 50px;
     gap: 20px;
     color: var(--paragraphs);
+    grid-area: first;
+    grid-column: 1/ 1 span;
+    grid-row: 1/ 1 span;
 }
 
 h1 {
@@ -61,6 +68,9 @@ p, button {
     padding: 50px;
     gap: 20px;
     color: var(--paragraphs);
+    grid-area: second;
+    grid-column: 2/ 1 span;
+    grid-row: 1/ 1 span;
 }
 
 .third {
@@ -70,6 +80,9 @@ p, button {
     padding: 50px;
     gap: 20px;
     color: var(--paragraphs);
+    grid-area: third;
+    grid-column: 3/ 1 span;
+    grid-row: 1/ 1 span;
 }
 
 img {
@@ -108,6 +121,7 @@ button:hover {
 
 .attribution a {
      color: hsl(0, 0%, 0%); 
+     
 }
 
 @media screen and (max-width:768px) {
@@ -115,6 +129,11 @@ button:hover {
         width: 650px;
         margin-top: 50px;
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 20px;
+        grid-template-areas:
+        "first"
+        "second"
+        "third";
     }
 }
 
@@ -123,10 +142,32 @@ button:hover {
         width: 350px;
         margin-top: 50px;
         grid-template-columns: 1fr;
-        
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "first"
+        "second"
+        "third";
     }
 
     .first, .second, .third {
         gap:20px
+    }
+
+    .first {
+        grid-area: first;
+        grid-column: 1/ 1 span;
+        grid-row: 1/ 1 span;
+    }
+
+    .second {
+        grid-area: second;
+        grid-column: 1/ 1 span;
+        grid-row: 2/ 1 span;
+    }
+
+    .third {
+        grid-area: third;
+        grid-column: 1/ 1 span;
+        grid-row: 3/ 1 span;
     }
 }
