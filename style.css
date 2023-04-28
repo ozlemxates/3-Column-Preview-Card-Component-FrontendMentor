@@ -19,13 +19,15 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    /* min-height: 100vh; */
+    background-color: hsla(0, 0%, 100%, 0.75);
 }
 
 main {
-    max-width: 1200px;
-    height: max-content;
+    max-width: 900px;
+    height: 500px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 300px 300px 300px;
     grid-template-rows: 1fr;
     grid-template-areas:
     "first second third";
@@ -39,7 +41,6 @@ main {
     flex-direction: column;
     background-color: var(--bg-1);
     padding: 50px;
-    gap: 20px;
     color: var(--paragraphs);
     grid-area: first;
     grid-column: 1/ 1 span;
@@ -49,11 +50,11 @@ main {
 h1 {
     font-family: var(--fl);
     font-weight: 700;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 p {
-    line-height: 40px;
+    line-height: 30px;
     margin-bottom: 40px;
 }
 
@@ -66,7 +67,6 @@ p, button {
     flex-direction: column;
     background-color: var(--bg-2);
     padding: 50px;
-    gap: 20px;
     color: var(--paragraphs);
     grid-area: second;
     grid-column: 2/ 1 span;
@@ -78,7 +78,6 @@ p, button {
     flex-direction: column;
     background-color: var(--bg-3);
     padding: 50px;
-    gap: 20px;
     color: var(--paragraphs);
     grid-area: third;
     grid-column: 3/ 1 span;
@@ -125,28 +124,40 @@ button:hover {
 }
 
 @media screen and (max-width:1200px) {
-
     body {
-        height: 2000px;
+        height: auto;
         align-items: center;
         justify-content: center;
     }
 
     main {
+        height: auto;
         display: grid;
-        width: 350px;
+        width: 280px;
         height: 3fr;
-        margin-top: 50px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        margin:20px 10px;
+        grid-template-columns: 280px;
+        grid-template-rows: 435px 435px 435px;
         grid-template-areas:
         "first"
         "second"
         "third";
+        overflow: auto;
     }
 
     .first, .second, .third {
-        gap:20px
+        padding: 35px;
+        font-size: 13px;
+    }
+
+    button {
+        width: 220px;
+        height: 40px;
+    }
+
+    p {
+        margin-top:-5px ;
+        margin-bottom: 29px;
     }
 
     .first {
