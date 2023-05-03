@@ -25,8 +25,6 @@ Users should be able to:
 
 While doing this challange I realised body element does actually not automatically always screen size. So we need to adjust its size to properties to actually work 🥲 (Sounds simple but actually not)
 
-To see how you can add code snippets, see below:
-
 ```html
 <h1>The lines that help me alot</h1>
 ```
